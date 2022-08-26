@@ -26,7 +26,7 @@ function buildTable(data) {
 }
 
 function handleClick() {
-  let date = D3.select("#datetime").property("value");
+  let date = d3.select("#datetime").property("value");
   // select() selects the first element that matches the selector string (the string in html)
   let filteredData = tableData; //setting default as whole table
   if (date) {
@@ -37,7 +37,7 @@ function handleClick() {
   buildTable(filteredData);
 }
 // Attach an event to listen for the form button
-D3.selectAll("#filter-btn").on("click", handleClick); // # is another html tag id
+d3.selectAll("#filter-btn").on("click", handleClick); // # is another html tag id
 
 // build table when page loads
 
